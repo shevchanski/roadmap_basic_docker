@@ -1,3 +1,7 @@
 FROM alpine:latest
 
-CMD ["echo", "Hello, Captain!"]
+ARG NAME=Captain
+
+ENV USER_NAME=$NAME
+
+CMD echo "Hello, ${USER_NAME}"
